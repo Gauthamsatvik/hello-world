@@ -1,0 +1,176 @@
+
+Gautham
+learning
+Loading history...
+Kushagra Agarwal  9:02 AM
+
+Git commands - 07/22142  git branch
+  143  git checkout -b b1 master
+  144  git checkout master
+  145  git branch
+  146  git checkout -b b2 b1
+  147  git checkout b1
+  148  ls
+  149  git ls-files
+  150  vi e.txt
+  151  git branch
+  152  git add e.txt 
+  153  git commit -m "learning branching, added e.txt file"
+  154  ls
+  155  git ls-files
+  156  git checkout master
+  157  ls
+  158  git ls-files
+  159  git branch
+  160  clear
+  161  git branch
+  162  git merge b1
+  163  ls
+  164  git ls-files
+  165  git status
+  166  git log --oneline
+  167  clear
+  168  git branch
+  169  git checkout b1
+  170  git branch
+  171  ls
+  172  vi d.txt 
+  173  git commit -a -m "modified d.txt"
+  174  git status
+  175  git chekout master
+  176  git checkout master
+  177  git status
+  178  git merge b1
+  179  cat d.txt 
+  180  vi d.txt 
+  181  git commit -a -m "making change"
+  182  git checkout b1
+  183  vi d.txt 
+  184  git commit -a -m "changed d.txt"
+  185  git checkout master
+  186  clear
+  187  git merge b1
+  188  vi d.txt 
+  189  git status
+  190  git commit -a -m "modified d.txt"
+  191  git status
+  192  cat d.txt 
+  193  git checkout b1
+  194  cat d.txt 
+  195  git checkout b2
+  196  git branch
+  197  git merge b1
+  198  git checkout b1
+  199  ls
+  200  vi f.txt
+  201  git add f.txt 
+  202  git commit -m "added f.txt"
+  203  vi g.txt
+  204  git add g.txt 
+  205  git commit -m "adding g.txt"
+  206  git branch
+  207  git log --oneline
+  208  git checkout master
+  209  ls
+  210  git cherry-pick 2e92c37
+  211  ls
+  212  git ls-files
+  213  git checkout b1
+  214  ls
+  215  git log --oneline
+218  git branch
+  219  git checkout master
+  220  ls
+  221  git log --oneline
+  222  git checkout kush
+  223* git log --onel
+  224  git checkout b1
+  225  clear
+  226  git log --oneline
+  227  git show 2e92c37
+  228  git checkout master
+  229  ls
+  230  git cherry-pick d91951d
+  231  ls
+  232  git status
+  233  clear
+  234  git branch
+  235  git log --oneline
+  236  git tag -a v1 5e51a41 -m "adding tags"
+  237  git tag
+  238  git show v1
+  239  git log --oneline
+  240  git tag -a v2 fe5f19d -m "adding tags"
+  241  git tag
+  242  clear
+  243  git branch
+  244  git status
+  245  ls
+  246  vi f.txt 
+  247  git status
+  248  git stash
+  249  git status
+  250  cat f.txt 
+  251  git stash list
+  252  git show stash@{0}
+  253  git stash
+  254  git stash list
+  255  git stash pop stash@{0}
+  256  git stash list
+  257  cat f.txt 
+  258  git status
+  259  git commit -a -m "modified f.txt"
+  260  ls
+  261  vi f.txt 
+  262  git stash
+  263  git stahs list
+  264  git stash list
+  265  git stash drop stash@{0}
+  266  git stash list
+  267  cat f.txt 
+  268  git remote add origin https://github.com/devopstrainer1/git22.git
+  269  git remote -v
+  270  git push -u origin master
+  271  git push origin b1
+  272  clear
+  273  git remote add origin1 https://github.com/devopstrainer1/git23.git
+  274  git remote -v
+  275  git push origin1 b1
+  276  git pull origin1 b1
+  277  git branch
+  278  git checkout b1
+  279  ls
+  280  vi f.txt 
+  281  git commit -a -m "fixing"
+  282  cd ..
+  283  mkdir kush1
+  284  cd kush1
+  285  git clone https://github.com/devopstrainer1/microsoft-graph-docs.git
+  286  ls
+  287  git remote -v
+  288  cd microsoft-graph-docs/
+  289  git remote -v
+  290  git branch
+
+Kushagra Agarwal  8:53 AM
+please fork this repohttps://github.com/edureka-git/DevOpsClassCodes
+GitHubGitHub
+edureka-git/DevOpsClassCodes
+Contribute to edureka-git/DevOpsClassCodes development by creating an account on GitHub.
+karthik  12:45 PM
+@Kushagra Agarwal can you please share 23rd July commands (edited) 
+Kushagra Agarwal  6:45 AM
+@karthik jenkins is completely GUI based tool, it is not possible to share commands for it
+Kushagra Agarwal  7:59 AM
+
+Maven GoalsCompile - goal compile
+code review --P metrics pmd:pmd - post build - target/pmd.xml
+QA Unit test - test - post build - target/surefire-reports/*.xml
+QA metric job - cobertura:cobertura -Dcobertura.report.format=xml - post build **/target/site/cobertura/coverage.xml
+QA packaging - package
+
+
+Message #learning
+Return to sendShift + Return to add a new line
+Slack needs your permission to 
+.

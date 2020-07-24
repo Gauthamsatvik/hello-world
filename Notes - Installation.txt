@@ -1,0 +1,275 @@
+
+To Find External Address
+
+Public IP Address curl ifconfig.co
+
+Command to find List of Installed S/W on Linux OS
+
+> rpm -qa
+
+q flag means query
+a flag means List of all installed packages
+
+or use
+
+> yum list installled
+
+
+To Install Jenkins
+
+Prerequiste : Install Java 8 or Less but not greater than java9
+
+
+1)
+
+Install Java on Linux machine
+
+yum install -y java-1.8.0-openjdk
+
+2) To Install Jenkins Go to Jenkins Page
+
+pkg.jenkins.io/redhat-stable/
+
+RedHat Linux RPM install package for Jenkins
+
+You use commands listed over there for Jenkins Installation on Linux machine
+
+wget:
+
+wget is Downloader Manager
+
+1) To Download via wget Downloader Manager Install wget via yum install first
+
+SO INSTALL wget first
+
+yum install -y wget
+
+After wget is Installed , Execute below 2 commands
+
+2)  To use this repository, run the following command: 
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+3) To import key from Jenkins 
+
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+
+If we already have  key in Jenkins this command will fail
+
+4) Now we will Install Jenkins
+
+yum install -y  jenkins
+
+
+2.2.35 Jenkins is Installed as a Service
+
+
+rpm --- redhat package  manager default opensource package manager we can install / unistall / update packages
+
+>hostname
+
+>systemctl start jenkins
+
+> systemctl status jenkins
+
+
+To Jenkins service or not
+
+> start jenkins
+> stop jenkins
+
+
+TO have Jenkins in up and running state even if System is Rebooted
+
+> systemctl enable  jenkins
+
+
+To Enable any Service all the time up and running all the time independent of System Rebooting
+
+systemctl  enable jenkins
+
+Every VM 2 ip address Public IP , Private IP
+
+ifconfig to find Internal / Private ip address
+
+To Find External Address / Public IP Address
+
+Public IP Address : curl ifconfig.co
+
+Default Jenkins Screen
+
+We need to Unlock Jenkins
+
+To Unlock Jenkins
+
+Pwd is Present Here
+
+/var/lib/jenkins/secrets/initialAdminPassword
+
+Go to this path and Unlock the Jenkins
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+Paste key and click on  continue
+
+> Select Install Suggested Plugins
+
+Every Service is Installed on Unique Port
+
+cd /etc/sysconfig/
+
+File :  jenkins
+
+vi jenkins
+
+Default Configuration File for Jenkins
+
+JENKINS-PORT=8080
+
+Change JENKINS_PORT Here to desired one
+
+
+Any Changes to Configuration File
+
+Restart the Service
+
+systemctl restart jenkins
+
+systemctl jenkins status
+
+
+JOB / ITEM / PROJECT === ALL ARE SAME
+
+Jenkins > Manage Jenkins
+
+System Configuration
+
+
+Install Plugins
+Global Tool Configuration
+Configure System
+Manage Nodes and Clouds
+
+
+Security
+
+Manage Users
+Manage Credentials
+Configure Gloabal Security
+
+
+Status Information
+
+System Information
+Systemlog
+
+
+Manage users >  Create User
+
+Create User
+
+Add user > username / Password
+
+
+Security > Configure Global Securiity
+
+Security Relam
+
+LDAP
+
+All users will be synced up
+
+Whenever user is added user will be added to user database
+
+99% used one is LDAP
+
+Jenkins own user DB
+
+Authorization Strategy
+
+Project-Based Matrix Authotization Strategy
+
+Recommended One
+
+Job1 User1
+Job2 User2
+
+User1 Admin rights on his Job
+
+User2 Admin rights on his Job
+
+and read only access to other Job i.e Job2 and Full Access to Job1
+
+Add User or Group
+
+Admin > Over all Admin Rights
+
+Test > Over all Jenkins and view all the Jobs
+
+Plugins
+
+Advanced --- Create own Plugin -- Jenkins validate Plugin and once they validate --- It will be in the list
+
+Logging
+
+Logging Plugin
+
+Store Logs in Centralized Repository
+
+audit-trail ---- for Logging
+
+Install this Plugin
+
+Audit Trail ----- Install without Restart
+
+Plugin will be Installed 
+
+
+Configure the Plugin
+
+Configure System
+
+Audit Trail
+
+Loggers > Add Logger 
+
+console log
+Elastic Search Server
+Log File
+Syslog Server
+
+Select on Log File
+
+ Mention Log File Location /tmp/log
+Log File Size MB  5
+Log File Count 5
+Log Seperator 
+
+By default space is seperator
+
+Apply > Save
+
+Log File Count max 5 If 5th Log File reaches 5mb 1st Log file is deleted
+
+Log file is same for all the Jobs
+
+
+Build Trigger
+
+Job > Build Trigger > Build Perodically
+
+Specify Time when Job needs to Run at Particular Time
+
+Corn Scheduler --- Specify Time
+
+Schedule Time
+
+Crontab entry format
+
+URL : crontabguru
+
+Generally 5 Fields for Cron tab
+
+Job gets Triggered at Specified Time as mentioned in Build Trigger
+
+
